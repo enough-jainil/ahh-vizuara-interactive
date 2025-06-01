@@ -277,7 +277,7 @@ export default function Landing() {
                 isDark ? "text-white" : "text-slate-900"
               }`}
             >
-              Nuts & Bolts AI
+              Vizuara AI Labs
             </h1>
           </motion.div>
 
@@ -337,7 +337,7 @@ export default function Landing() {
       ></motion.div>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6">
+      <section className="relative pt-20 pb-12 px-6">
         <motion.div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -346,7 +346,7 @@ export default function Landing() {
             className="text-center max-w-3xl mx-auto"
           >
             <motion.div
-              className="flex justify-center mb-6"
+              className="flex justify-center mb-4"
               animate={{ rotate: 360 }}
               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
             >
@@ -372,7 +372,7 @@ export default function Landing() {
             </motion.div>
 
             <motion.h1
-              className={`text-5xl md:text-6xl lg:text-7xl font-bold mb-6 ${
+              className={`text-5xl md:text-6xl lg:text-7xl font-bold mb-4 ${
                 isDark ? "text-white" : "text-slate-900"
               }`}
               initial={{ opacity: 0, y: 20 }}
@@ -390,40 +390,29 @@ export default function Landing() {
             </motion.h1>
 
             <motion.p
-              className={`text-lg md:text-xl mb-4 ${
+              className={`text-lg md:text-xl mb-3 ${
                 isDark ? "text-slate-400" : "text-slate-600"
               }`}
             >
-              powered by Vizuara AI
+              Powered by Vizuara AI
             </motion.p>
 
             <motion.p
-              className={`text-xl md:text-2xl mb-12 ${
+              className={`text-xl md:text-2xl mb-6 ${
                 isDark ? "text-slate-300" : "text-slate-600"
               }`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Master the foundational concepts through hands-on interaction
+              Master the foundational concepts through hands-on interaction!
             </motion.p>
-
-            {/* Adding subtle decorative elements */}
-            <motion.div
-              className="flex justify-center gap-4 mb-12"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              <div className={`h-1 w-16 rounded-full bg-gradient-to-r from-blue-400 to-purple-400`}></div>
-              <div className={`h-1 w-16 rounded-full bg-gradient-to-r from-purple-400 to-blue-400`}></div>
-            </motion.div>
           </motion.div>
         </motion.div>
       </section>
 
       {/* Learning Modules Cards */}
-      <section className="py-20 px-6 relative">
+      <section className="py-12 px-6 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -513,7 +502,7 @@ export default function Landing() {
       </section>
 
       {/* AI Concept Visualization Section */}
-      <section className="py-24 px-6 relative overflow-hidden">
+      <section className="py-16 px-6 relative overflow-hidden">
         {/* Subtle background decoration */}
         <div className="absolute inset-0 pointer-events-none opacity-5">
           <div
@@ -601,14 +590,14 @@ export default function Landing() {
       </section>
 
       {/* Features Section */}
-      <section className="py-32 px-6 relative">
+      <section className="py-16 px-6 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-20"
+            className="text-center mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
               Powerful Learning Features
@@ -640,7 +629,7 @@ export default function Landing() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 px-6 relative overflow-hidden">
+      <section className="py-16 px-6 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
