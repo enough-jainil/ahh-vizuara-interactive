@@ -43,39 +43,6 @@ interface SocialLink {
   href: string;
 }
 
-function ParallaxText({
-  children,
-  baseVelocity = 5,
-}: {
-  children: string;
-  baseVelocity?: number;
-}) {
-  return (
-    <div className="overflow-hidden whitespace-nowrap flex items-center">
-      <motion.div
-        className="flex whitespace-nowrap"
-        animate={{
-          x: [0, -1000],
-        }}
-        transition={{
-          x: {
-            repeat: Infinity,
-            repeatType: "loop",
-            duration: 20,
-            ease: "linear",
-          },
-        }}
-      >
-        <span className="block mr-12 flex-shrink-0">{children}</span>
-        <span className="block mr-12 flex-shrink-0">{children}</span>
-        <span className="block mr-12 flex-shrink-0">{children}</span>
-        <span className="block mr-12 flex-shrink-0">{children}</span>
-        <span className="block mr-12 flex-shrink-0">{children}</span>
-      </motion.div>
-    </div>
-  );
-}
-
 function FeatureCard({
   feature,
 }: {
@@ -310,7 +277,7 @@ export default function Landing() {
                 isDark ? "text-white" : "text-slate-900"
               }`}
             >
-              Vizuara AI Lab
+              Nuts & Bolts AI
             </h1>
           </motion.div>
 
@@ -412,15 +379,23 @@ export default function Landing() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Visualize{" "}
+              Nuts &{" "}
               <motion.span
                 className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent relative inline-block"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
-                AI Concepts
+                Bolts AI
               </motion.span>
             </motion.h1>
+
+            <motion.p
+              className={`text-lg md:text-xl mb-4 ${
+                isDark ? "text-slate-400" : "text-slate-600"
+              }`}
+            >
+              powered by Vizuara AI
+            </motion.p>
 
             <motion.p
               className={`text-xl md:text-2xl mb-12 ${
@@ -430,22 +405,18 @@ export default function Landing() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Experience the inner workings of AI through interactive
-              visualizations
+              Master the foundational concepts through hands-on interaction
             </motion.p>
 
+            {/* Adding subtle decorative elements */}
             <motion.div
-              className={`py-4 mb-12 text-lg overflow-hidden ${
-                isDark ? "text-slate-400" : "text-slate-500"
-              }`}
+              className="flex justify-center gap-4 mb-12"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <ParallaxText>
-                Matrix Operations • Neural Networks • Attention Mechanisms •
-                Deep Learning • Transformers •
-              </ParallaxText>
+              <div className={`h-1 w-16 rounded-full bg-gradient-to-r from-blue-400 to-purple-400`}></div>
+              <div className={`h-1 w-16 rounded-full bg-gradient-to-r from-purple-400 to-blue-400`}></div>
             </motion.div>
           </motion.div>
         </motion.div>
